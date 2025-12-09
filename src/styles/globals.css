@@ -1,0 +1,70 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%; /* Hitam Pekat #0d0d0d */
+    --foreground: 155 40% 98%; /* Putih kehijauan */
+    
+    /* MINT GREEN GRADIENT COLORS (Primary) */
+    --primary: 158 80% 60%; /* Mint Cerah */
+    --primary-foreground: 0 0% 5%;
+    
+    /* PURPLE COLORS (Secondary/Keyboard) */
+    --secondary: 265 80% 60%; /* Ungu */
+    --secondary-foreground: 0 0% 100%;
+    
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    --accent: 158 50% 10%;
+    --accent-foreground: 158 80% 60%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 158 80% 60%;
+    
+    --radius: 0.5rem;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif; /* Font modern bersih */
+  }
+}
+
+@layer utilities {
+    /* Gradient Text Style */
+    .text-gradient-mint {
+        @apply bg-clip-text text-transparent bg-gradient-to-b from-emerald-300 to-emerald-600;
+    }
+    
+    .text-gradient-purple {
+        @apply bg-clip-text text-transparent bg-gradient-to-b from-violet-300 to-violet-600;
+    }
+
+    /* Button Gradient Style */
+    .btn-gradient-green {
+        @apply bg-gradient-to-b from-emerald-300 to-emerald-500 text-black font-bold shadow-lg hover:brightness-110 transition-all border-none;
+    }
+    
+    .btn-gradient-purple {
+        @apply bg-gradient-to-b from-violet-500 to-violet-700 text-white font-bold shadow-lg hover:brightness-110 transition-all border-none;
+    }
+}
